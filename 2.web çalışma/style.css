@@ -1,0 +1,84 @@
+*{
+    padding: 0;
+    margin: 0;   
+    box-sizing : border-box ;  /*bu body etiketi açılımı için*/
+}
+body{
+    background-image: url(r7.jpg);
+    font-family: sans-serif;
+}
+
+.menu-bar{
+    background: #5b71b5;
+    text-align:  center;
+}
+.menu-bar ul{ 
+    display: inline-flex; /*alt alta dizili olanları yanana yapar*/
+   list-style: none;       /*baştaki yıldız nokta kaldırılır*/
+ 
+}
+.menu-bar ul li{
+    width: 150px;      /*yazı genişligi*/
+    margin: 15px;     /* aralarındaki boşluk*/
+    padding: 15px;      /*sayfanın köşelerine uzaklık*/
+         
+}
+.menu-bar ul li a{
+    text-decoration: none;
+    color: #fff;
+}
+ .active,   
+.menu-bar ul li:hover{
+background: #d4c995;
+border-radius: 13px;
+
+}
+.menu-bar .fas{
+    margin-right: 8px;
+}
+.sub-menu-1{
+    display: none;
+}
+
+.menu-bar ul li:hover  .sub-menu-1{
+
+    display:block;
+    position:absolute;   /* sadece oldugu div i kapsar*/
+    background: #5b71b5;
+    margin-top: 15px;
+    margin-left: -15px;
+    font-size: 10px;
+
+}
+.menu-bar ul li:hover  .sub-menu-1 ul{
+    display: block ;       /*alt alta gelmeleri için */
+     
+} 
+.menu-bar ul li:hover  .sub-menu-1 ul li{
+    width: 150px;
+    padding: 10px;
+    border-bottom: 1px dotted #fff;      /*allta çizgi oluşturma solid olabilir */
+    background: transparent;
+    text-align: left;
+    border-radius: 0;
+    cursor: pointer;
+}
+.menu-bar ul li:hover .sub-menu-1 ul li a:hover{
+    color: #b2ff00;
+}
+.fa-caret-right{                /*sağ gösterme iconu*/
+    font-size: 14px;
+    color: #fff;
+    float: right;         /* belirlitilen iconu saga taşı*/
+}
+.sub-menu-2{
+    display: none;
+}
+.hover-me:hover  .sub-menu-2{
+      position: absolute;    /*bulunduğu div le ilgili*/
+      display: block;
+      margin-top: -40px;
+      margin-left: 140px;
+     background: #5b71b5;
+         
+}
